@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-title class="ion-text-capitalize">
+            Componentes
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list *ngFor="let c of pagesList">
+        <ion-item [routerLink]="c.redirectTo">
+            <ion-icon slot="start" name="{{c.icon}}"></ion-icon>
+            <ion-label>{{c.name}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-button routerLink="/alert">Alert</ion-button>
+    <ion-button routerLink="/action-sheet">action-sheet</ion-button>
+</ion-content>

@@ -1,0 +1,54 @@
+<app-custom-header title="fechas"></app-custom-header>
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            Datoa de nacimiento
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Fecha de Nacimiento</ion-label>
+            <ion-datetime
+                    placeholder="Fec.Nacimiento"
+                    display-format="DD/MM/YYYY"
+                    cancelText="Cancelar"
+                    doneText="Confirmar"
+                    [ngModel]="FecNac.toISOString()"
+                    (ionChange)="cambiarFecha($event)">
+
+            </ion-datetime>
+        </ion-item>
+
+        <ion-list-header>
+            Restricciones
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Min y Max</ion-label>
+            <ion-datetime
+                    placeholder="DD/MM/YYYY"
+                    display-format="DD/MM/YYYY"
+                    min="2008-02-14"
+                    max="2014-07-20">
+            </ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Anios</ion-label>
+            <ion-datetime
+                    placeholder="YYYY"
+                    display-format="YYYY"
+                    min="2015"
+                    max="2025"
+                    value="2020-01-01">
+            </ion-datetime>
+        </ion-item>
+        <ion-list-header>
+            Por codigo
+        </ion-list-header>
+        <ion-item>
+            <ion-label>Personalizado</ion-label>
+            <ion-datetime
+            [pickerOptions]="customPickerOption"
+            [value]="customDate">
+            </ion-datetime>
+        </ion-item>
+
+    </ion-list>
+</ion-content>
