@@ -224,9 +224,22 @@
     --ion-toolbar-background: #1f1f1f;
 
     --ion-tab-bar-background: #1f1f1f;
+
+    /***youtube*/
+    --ion-color-youtube: #fe5a32;
+    --ion-color-youtube-rgb: 254,90,50;
+    --ion-color-youtube-contrast: #000000;
+    --ion-color-youtube-contrast-rgb: 0,0,0;
+    --ion-color-youtube-shade: #e04f2c;
+    --ion-color-youtube-tint: #fe6b47;
   }
 
-  ion-title.title-large {
-    --color: white;
+  .ion-color-youtube{
+    --ion-color-base: var(--ion-color-youtube) !important;
+    --ion-color-base-rgb: var(--ion-color-youtube-rgb) !important;
+    --ion-color-contrast: var(--ion-color-youtube-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-youtube-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-youtube-shade) !important;
+    --ion-color-tint: var(--ion-color-youtube-tint) !important;
   }
 }
