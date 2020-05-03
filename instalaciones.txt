@@ -1,0 +1,19 @@
+///instalaciones por ejecutable
+1. postman
+2. android studio
+
+///instalaciones npm
+1. install -g @angular/cli@latest
+2. npm install -g ionic@latest
+3. npm install -g cordova@latest
+
+///registrarse en ionic
+
+///crear un proyecto
+ionic start [nombre proyecto]
+
+///levantar la aplicacion
+ionic serve
+
+///para gnerar componetes y paginas
+ionic g
