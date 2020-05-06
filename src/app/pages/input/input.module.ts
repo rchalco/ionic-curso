@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InfiniteScrollPageRoutingModule } from './infinite-scroll-routing.module';
+import { InputPageRoutingModule } from './input-routing.module';
 
-import { InfiniteScrollPage } from './infinite-scroll.page';
+import { InputPage } from './input.page';
 import {ComponentsModule} from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {ComponentsModule} from '../../components/components.module';
 		CommonModule,
 		FormsModule,
 		IonicModule,
-		InfiniteScrollPageRoutingModule,
+		InputPageRoutingModule,
 		ComponentsModule
 	],
-  declarations: [InfiniteScrollPage]
+  declarations: [InputPage]
 })
-export class InfiniteScrollPageModule {}
+export class InputPageModule {}
