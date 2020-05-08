@@ -1,14 +1,31 @@
 <ion-header class="ion-no-border">
     <ion-toolbar>
-        <ion-title class="ion-text-capitalize">
+        <!--        de forma programable-->
+        <!-- <ion-buttons slot="start">
+             <ion-button (click)="toogleMenu()">
+                 <ion-icon slot="icon-only" name="menu"></ion-icon>
+             </ion-button>
+         </ion-buttons>-->
+        <!--        automatico-->
+        <ion-buttons slot="start">
+            <ion-menu-button
+                    color="primary"
+                    menu="mainMenu">
+            </ion-menu-button>
+        </ion-buttons>
+
+        <ion-title class="ion-text-capitalize"
+                   color="primary">
             Componentes
         </ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-list *ngFor="let c of pagesList">
+    <ion-list *ngFor="let c of pagesList | async">
         <ion-item [routerLink]="c.redirectTo">
-            <ion-icon slot="start" name="{{c.icon}}"></ion-icon>
+            <ion-icon slot="start"
+                      color="primary"
+                      name="{{c.icon}}"></ion-icon>
             <ion-label>{{c.name}}</ion-label>
         </ion-item>
     </ion-list>

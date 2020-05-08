@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {MenuController} from '@ionic/angular';
+import {PagesLIst} from 'src/app/interfaces/interfaces';
+import {Observable} from 'rxjs';
+import {DataService} from '../../services/data.service';
 
 @Component({
 	selector: 'app-inicio',
@@ -6,7 +10,7 @@ import {Component, OnInit} from '@angular/core';
 	styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-	pagesList: PagesLIst[] = [
+	/*pagesList: PagesLIst[] = [
 		{
 			name: 'alert',
 			icon: 'alarm',
@@ -77,18 +81,19 @@ export class InicioPage implements OnInit {
 			icon: 'refresh-circle',
 			redirectTo: '/loading'
 		}
-	];
+	];*/
+	pagesList: Observable<PagesLIst[]>;
 
-	constructor() {
+	constructor(private menuController: MenuController, private dataService: DataService) {
+
 	}
 
 	ngOnInit() {
+		this.pagesList = this.dataService.getMenuOptions();
 	}
 
-}
+	toogleMenu() {
+		this.menuController.toggle();
+	}
 
-export interface PagesLIst {
-	name: string;
-	icon: string;
-	redirectTo: string;
 }
