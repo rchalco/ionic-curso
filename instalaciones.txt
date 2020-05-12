@@ -20,3 +20,25 @@ ionic g
 
 ///para crear pipes (modificadores a nivel de interfaz)
 ionic g pipe pipes/{nombrepipe}
+
+//para preparar el proyecto para android con capacitor
+//instalacion de capacitor
+npm install --save @capacitor/core @capacitor/cli
+//integracion de capacitor
+ionic integrations enable capacitor
+//registro del app
+npx cap init
+//adicion de conf de android
+npx cap add android
+//compilacion
+ionic build
+//abre el android studio
+npx cap open
+//sincroniza la app
+npx cap copy
+
+//manera resumida y mas facil (despues de configurar todo)
+ionic build
+ionic capacitor run android --consolelogs -l --address=0.0.0.0
+//para ver los mensajes de consola
+chrome://inspect/#devices
