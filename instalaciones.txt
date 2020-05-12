@@ -17,3 +17,6 @@ ionic serve
 
 ///para gnerar componetes y paginas
 ionic g
+
+///para crear pipes (modificadores a nivel de interfaz)
+ionic g pipe pipes/{nombrepipe}

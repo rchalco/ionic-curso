@@ -78,5 +78,35 @@
     "name": "Popover",
     "icon": "tablet-portrait",
     "redirectTo": "/popover"
+  },
+  {
+    "name": "Progress Bar y range",
+    "icon": "code-working",
+    "redirectTo": "/progress-bar"
+  },
+  {
+    "name": "Refresher",
+    "icon": "arrow-down",
+    "redirectTo": "/refresher"
+  },
+  {
+    "name": "Search Bar",
+    "icon": "search",
+    "redirectTo": "/searchbar"
+  },
+  {
+    "name": "Segment",
+    "icon": "copy",
+    "redirectTo": "/segment"
+  },
+  {
+    "name": "Slides",
+    "icon": "albums",
+    "redirectTo": "/slides"
+  },
+  {
+    "name": "Tabs",
+    "icon": "cog",
+    "redirectTo": "/tabs/account"
   }
 ]
